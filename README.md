@@ -9,14 +9,12 @@ This approach is commonly referred to as:
 * **Bootstrap provisioning**
 * **Post-install automation**
 
-It is *not* a custom ISO or unattended OS installer.
-
 ---
 
 ## Features
 
 * One-command installation
-* Modular scripts (APT / Snap / Flatpak)
+* Modular scripts (APT / Snap / Flatpak (coming soon))
 * Safe re-runs (idempotent)
 * Bandwidth-aware mode (for low-bandwidth environments)
 * Automatic Timeshift snapshot before changes
@@ -33,8 +31,8 @@ ubuntu-linux-bootstrap-scripts/
 ├── apt.sh                # APT-based applications
 ├── snap.sh               # Snap-based applications
 ├── preflight.sh          # Checks + Timeshift snapshot
-└── README.md
-├── LICENSE.md
+├── README.md
+└── LICENSE.md
 ```
 
 ---
@@ -83,9 +81,10 @@ Then run the installer normally.
 
 * MPV instead of VLC
 * YACReader (openSUSE Build Service)
+* Qbittorrent
 * Discord (Snap)
 * Telegram Desktop (Snap)
-
+* GitKraken
 * VSCode
 * Android Studio
 
@@ -108,8 +107,6 @@ The script is **idempotent**:
 
 * Already installed apps are skipped
 * Existing repositories are not duplicated
-
-You can safely re-run it after system updates.
 
 ---
 
